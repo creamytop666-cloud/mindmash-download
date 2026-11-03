@@ -3,7 +3,7 @@
 
 // Paste your verified HTTPS APK download URL here.
 // Example: a direct GitHub Releases asset URL.
-const APK_DOWNLOAD_URL = "";
+const APK_DOWNLOAD_URL = "https://github.com/creamytop666-cloud/mindmash-download/releases/download/v1.0.0/MindMash-v1.0.0.apk";
 // Fill these in after generating your signed release APK.
 // The checksum must be computed from the EXACT APK you publish.
 const APK_VERSION = "";

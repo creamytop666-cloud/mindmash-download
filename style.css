@@ -614,3 +614,149 @@ img {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* APP SCREENSHOTS GALLERY */
+
+.screenshots-section {
+  background: #f4f3ff;
+  padding: 95px 0;
+}
+
+.screenshots-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.screenshots-track {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 20px 5px 28px;
+  scrollbar-width: thin;
+  flex: 1;
+  min-width: 0;
+}
+
+.screenshot-item {
+  flex: 0 0 230px;
+  scroll-snap-align: center;
+  text-align: center;
+}
+
+.screenshot-item img {
+  width: 100%;
+  height: 420px;
+  object-fit: contain;
+  background: #ffffff;
+  border-radius: 22px;
+  border: 5px solid #ffffff;
+  box-shadow: 0 12px 30px rgba(60, 50, 130, .13);
+  cursor: zoom-in;
+  transition: transform .25s ease;
+}
+
+.screenshot-item img:hover {
+  transform: translateY(-5px);
+}
+
+.screenshot-item h3 {
+  font-size: 15px;
+  font-weight: 900;
+  margin-top: 16px;
+}
+
+.gallery-arrow {
+  flex: 0 0 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #6457e8;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.gallery-arrow:hover {
+  background: #5144cf;
+}
+
+.gallery-hint {
+  text-align: center;
+  color: #68738c;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+/* FULL SCREEN IMAGE PREVIEW */
+
+.screenshot-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(15, 18, 40, .92);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 55px 20px 25px;
+}
+
+.screenshot-lightbox[hidden] {
+  display: none;
+}
+
+.screenshot-lightbox img {
+  max-width: 95%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 38px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .screenshots-section {
+    padding: 65px 0;
+  }
+
+  .screenshots-wrapper {
+    gap: 5px;
+  }
+
+  .screenshots-track {
+    gap: 12px;
+  }
+
+  .screenshot-item {
+    flex-basis: 200px;
+  }
+
+  .screenshot-item img {
+    height: 370px;
+  }
+
+  .gallery-arrow {
+    flex-basis: 30px;
+    height: 36px;
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screenshots-track {
+    scroll-behavior: auto;
+  }
+}
+

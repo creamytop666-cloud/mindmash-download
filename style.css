@@ -760,3 +760,16 @@ img {
   }
 }
 
+
+/* INSTALLATION SECURITY INFO */
+.security-note { margin: 30px auto 0; padding: 24px; max-width: 880px; border: 1px solid #dddaf8; border-radius: 20px; background: #f8f7ff; overflow-wrap: anywhere; }
+.security-note h3 { margin: 0 0 10px; }
+.security-note p { margin: 10px 0; line-height: 1.65; }
+.security-note code { display: inline-block; font-size: 12px; word-break: break-all; margin: 8px 12px 8px 0; }
+.security-small { font-size: 13px; color: #626c82; }
+.copy-checksum { padding: 8px 13px; border: 0; border-radius: 10px; background: #6457e8; color: white; cursor: pointer; }
+#checksumCopyStatus { margin-left: 10px; font-size: 13px; }
+.privacy-page { max-width: 850px; padding-top: 70px; padding-bottom: 90px; line-height: 1.75; }
+.privacy-page h1 { margin-bottom: 18px; }
+.privacy-page h2 { margin-top: 28px; margin-bottom: 8px; }
+.privacy-draft-warning { padding: 16px; background: #fff5db; border: 1px solid #e5bf65; border-radius: 12px; }

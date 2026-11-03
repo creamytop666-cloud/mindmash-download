@@ -131,13 +131,13 @@
             </div>
     
             <div class="screenshot-item">
-              <img src="assets/screenshots/3picsword_difficulty.png"
+              <img src="assets/screenshots/picsword_difficulty.png"
                    alt="PicsWord Difficulty" loading="lazy">
               <h3>PicsWord Difficulty</h3>
             </div>
 
             <div class="screenshot-item">
-              <img src="assets/screenshots/3picsword_game.png"
+              <img src="assets/screenshots/picsword_game.png"
                    alt="PicsWord Game" loading="lazy">
               <h3>PicsWord Game</h3>
             </div>
@@ -263,39 +263,21 @@
       </div>
 
       <div class="steps-grid">
-        <div class="step-card">
-          <span class="step-number">01</span>
-          <h3>Download APK</h3>
-          <p>Tap the download button using your Android device.</p>
-        </div>
-
-        <div class="step-card">
-          <span class="step-number">02</span>
-          <h3>Open the File</h3>
-          <p>Find the downloaded APK in your Downloads folder.</p>
-        </div>
-
-        <div class="step-card">
-          <span class="step-number">03</span>
-          <h3>Allow Installation</h3>
-          <p>
-            If prompted, allow installation from the
-            browser or file manager you used.
-          </p>
-        </div>
-
-        <div class="step-card">
-          <span class="step-number">04</span>
-          <h3>Start Learning!</h3>
-          <p>Install and open Mind Mash to begin playing.</p>
-        </div>
+        <div class="step-card"><span class="step-number">01</span><h3>Download the APK</h3><p>Tap the official download button above on your Android phone.</p></div>
+        <div class="step-card"><span class="step-number">02</span><h3>Open Downloads</h3><p>Open the downloaded APK from your browser or Files / Downloads app.</p></div>
+        <div class="step-card"><span class="step-number">03</span><h3>Open Settings if Prompted</h3><p>If Android blocks the installation, tap <strong>Settings</strong> in the warning. On some phones, go to Settings → Apps → Special app access → Install unknown apps.</p></div>
+        <div class="step-card"><span class="step-number">04</span><h3>Allow This Source</h3><p>Turn on <strong>Allow from this source</strong> for the browser or file manager you used. The menu name varies by device and Android version.</p></div>
+        <div class="step-card"><span class="step-number">05</span><h3>Install Mind Mash</h3><p>Return to the APK installation screen, tap <strong>Install</strong>, and open Mind Mash after installation.</p></div>
+        <div class="step-card"><span class="step-number">06</span><h3>Turn Permission Off Again</h3><p>For added security, return to the same settings page and turn off <strong>Allow from this source</strong> after installing.</p></div>
       </div>
-
-      <p class="guide-reminder">
-        Only install APK files from a source you trust.
-        If your device reports a security warning, verify
-        the app's authenticity before proceeding.
-      </p>
+      <div class="security-note">
+        <h3>Download safety &amp; verification</h3>
+        <p>Only install the APK from the official link on this page. Do not ignore or bypass Play Protect or other security warnings. If Android flags the app, stop and contact the project team.</p>
+        <p id="apkVersionRow" hidden><strong>App version:</strong> <span id="apkVersion"></span></p>
+        <div id="apkChecksumRow" hidden><strong>APK SHA-256:</strong> <code id="apkChecksum"></code><button type="button" id="copyChecksum" class="copy-checksum">Copy checksum</button><span id="checksumCopyStatus" role="status" aria-live="polite"></span></div>
+        <p class="security-small">A SHA-256 checksum helps verify file integrity when compared with a trusted value; it does not replace Android's APK signature verification or malware scanning.</p>
+      </div>
+      <p class="guide-reminder">Installation steps may differ depending on your Android version and phone manufacturer. Parents or guardians should supervise installation and use.</p>
     </section>
   </main>
 
@@ -310,6 +292,7 @@
         <a href="#home">Home</a>
         <a href="#features">Features</a>
         <a href="#download">Download</a>
+        <a href="privacy.html">Privacy Policy</a>
       </div>
     </div>
 

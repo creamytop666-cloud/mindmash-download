@@ -4,13 +4,38 @@
 // Paste your verified HTTPS APK download URL here.
 // Example: a direct GitHub Releases asset URL.
 const APK_DOWNLOAD_URL = "";
+// Fill these in after generating your signed release APK.
+// The checksum must be computed from the EXACT APK you publish.
+const APK_VERSION = "";
+const APK_SHA256 = "";
 
 document.addEventListener("DOMContentLoaded", () => {
   const year = document.getElementById("year");
   const downloadButton = document.getElementById("apkDownload");
   const downloadStatus = document.getElementById("downloadStatus");
 
-  year.textContent = new Date().getFullYear();
+  if (year) year.textContent = new Date().getFullYear();
+  const versionRow = document.getElementById("apkVersionRow");
+  const versionText = document.getElementById("apkVersion");
+  if (APK_VERSION.trim() && versionRow && versionText) {
+    versionText.textContent = APK_VERSION;
+    versionRow.hidden = false;
+  }
+  const checksumRow = document.getElementById("apkChecksumRow");
+  const checksumText = document.getElementById("apkChecksum");
+  if (/^[a-f0-9]{64}$/i.test(APK_SHA256.trim()) && checksumRow && checksumText) {
+    checksumText.textContent = APK_SHA256.trim().toLowerCase();
+    checksumRow.hidden = false;
+    document.getElementById("copyChecksum")?.addEventListener("click", async () => {
+      const status = document.getElementById("checksumCopyStatus");
+      try {
+        await navigator.clipboard.writeText(checksumText.textContent);
+        if (status) status.textContent = "Copied!";
+      } catch {
+        if (status) status.textContent = "Select and copy the checksum manually.";
+      }
+    });
+  }
 
   let validDownloadUrl = false;
 
